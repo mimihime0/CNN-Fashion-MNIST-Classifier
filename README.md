@@ -24,6 +24,7 @@ The final optimized CNN was implemented with:
 - Data Augmentation such as rotations and horizontal flips.
 
 *- Final Test Accuracy: 89.76%*
+
 *- Final Test Loss: 0.2874*
 
 ### Baseline Model for Comparison:
@@ -36,6 +37,7 @@ A simple CNN architecture was implemented as a baseline to evaluate the improvem
 
 Results:
 *- Accuracy: 86%*
+
 *- Loss: 0.3535*
 
 The final model significantly outperformed the baseline due to its deeper architecture, balanced dropout, and enhanced regularization techniques.
