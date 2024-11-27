@@ -20,8 +20,7 @@ Initial experiments were conducted to refine the CNN architecture and training s
 The final optimized CNN was implemented with:
 
 - 3 Convolutional Layers with ReLU activation and 3×3 filter sizes.
-- Batch Normalization for stabilization.
-- Dropout Regularization at 25%.
+- Dropout Regularization at 0.25
 - Data Augmentation such as rotations and horizontal flips.
 
 *- Final Test Accuracy: 89.76%*
