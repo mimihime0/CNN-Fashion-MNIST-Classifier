@@ -36,6 +36,7 @@ A simple CNN architecture was implemented as a baseline to evaluate the improvem
 - Dense Softmax Output Layer for classifying 10 categories.
 
 Results:
+
 *- Accuracy: 86%*
 
 *- Loss: 0.3535*
