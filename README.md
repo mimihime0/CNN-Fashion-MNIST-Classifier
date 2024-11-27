@@ -14,21 +14,32 @@ The objective is to classify images of clothing into 10 distinct categories from
 The project was divided into multiple phases for iterative experimentation and improvement.
 
 ### Experimental Phase:
-Initial experiments tested different architectures, hyperparameters, and dataset divisions to identify overfitting and inefficiencies. A simple CNN baseline was used for comparison:
-- Baseline Accuracy: 86%
-- Baseline Loss: 0.3535
+Initial experiments were conducted to refine the CNN architecture and training strategy, addressing issues like overfitting and unstable validation accuracy.
 
 ### Final Phase:
-After addressing overfitting and optimizing the architecture, the final CNN was implemented with:
+The final optimized CNN was implemented with:
 
-3 Convolutional Layers with ReLU activation and 3×3 filter sizes.
+- 3 Convolutional Layers with ReLU activation and 3×3 filter sizes.
 - Batch Normalization for stabilization.
 - Dropout Regularization at 25%.
 - Data Augmentation such as rotations and horizontal flips.
 
 *- Final Test Accuracy: 89.76%*
-
 *- Final Test Loss: 0.2874*
+
+### Baseline Model for Comparison:
+A simple CNN architecture was implemented as a baseline to evaluate the improvements of the final model. The baseline model included:
+
+- 1 Convolutional Layer with 32 filters of size 2×2 and ReLU activation.
+- Max Pooling Layer for down-sampling.
+- High Dropout Rate of 60% after pooling and flattening layers, limiting its learning capacity.
+- Dense Softmax Output Layer for classifying 10 categories.
+
+Results:
+*- Accuracy: 86%*
+*- Loss: 0.3535*
+
+The final model significantly outperformed the baseline due to its deeper architecture, balanced dropout, and enhanced regularization techniques.
 
 ## Contents:
 
