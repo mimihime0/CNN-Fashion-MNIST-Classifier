@@ -33,5 +33,7 @@ After addressing overfitting and optimizing the architecture, the final CNN was 
 ## Contents:
 
 - "src/": contains the source code written in Python using TensorFlow/Keras.
+
+- "experiment/": includes screenshots of experimental results I got during the tuning phase.
   
 - "README.md": you are reading it right now!
