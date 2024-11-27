@@ -10,15 +10,15 @@ The objective is to classify images of clothing into 10 distinct categories from
 3. Applying data augmentation to enhance model generalization.
 4. Performing hyperparameter tuning for optimal training performance.
 
-Project Structure
+## Project Structure
 The project was divided into multiple phases for iterative experimentation and improvement.
 
-Experimental Phase:
+### Experimental Phase:
 Initial experiments tested different architectures, hyperparameters, and dataset divisions to identify overfitting and inefficiencies. A simple CNN baseline was used for comparison:
 - Baseline Accuracy: 86%
 - Baseline Loss: 0.3535
 
-Final Phase:
+### Final Phase:
 After addressing overfitting and optimizing the architecture, the final CNN was implemented with:
 
 3 Convolutional Layers with ReLU activation and 3×3 filter sizes.
