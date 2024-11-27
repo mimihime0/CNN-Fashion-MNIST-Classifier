@@ -25,8 +25,9 @@ After addressing overfitting and optimizing the architecture, the final CNN was 
 - Batch Normalization for stabilization.
 - Dropout Regularization at 25%.
 - Data Augmentation such as rotations and horizontal flips.
-- 
+
 *- Final Test Accuracy: 89.76%*
+
 *- Final Test Loss: 0.2874*
 
 ## Contents:
