@@ -1,52 +1,85 @@
-# Fashion-MNIST Classifier Project
-TThis project focuses on developing and optimizing a convolutional neural network (CNN) for classifying the Fashion-MNIST dataset. The model incorporates advanced techniques such as data augmentation, regularization, and hyperparameter tuning to achieve strong generalization and performance.
+# Fashion-MNIST CNN Classifier
 
-## Problem Statement 
+## Description
 
-The objective is to classify images of clothing into 10 distinct categories from the Fashion-MNIST dataset. The challenge involves optimizing a CNN architecture to improve accuracy and reduce overfitting, ensuring the model can generalize effectively to unseen data. Key tasks include:
+This project implements and optimizes a Convolutional Neural Network (CNN) using Python with TensorFlow/Keras within a Jupyter Notebook environment to classify images from the popular Fashion-MNIST dataset. The goal is to accurately categorize grayscale images of clothing items (like T-shirts, trousers, dresses, etc.) into 10 distinct classes.
 
-1. Designing and testing different CNN architectures.
-2. Incorporating regularization techniques such as dropout and L2 regularization.
-3. Applying data augmentation to enhance model generalization.
-4. Performing hyperparameter tuning for optimal training performance.
+The development process involved iterative experimentation, focusing on optimizing the CNN architecture and training process by incorporating techniques like data augmentation and regularization (Dropout, L2) to improve accuracy and generalization on unseen data. A baseline model is also included for performance comparison.
 
-## Project Structure
-The project was divided into multiple phases for iterative experimentation and improvement.
+## Features
 
-### Experimental Phase:
-Initial experiments were conducted to refine the CNN architecture and training strategy, addressing issues like overfitting and unstable validation accuracy.
+* Image classification for the Fashion-MNIST dataset (10 clothing categories).
+* Implementation of Convolutional Neural Networks (CNNs).
+* Use of advanced techniques during development:
+    * Data Augmentation (e.g., rotations, flips) to improve robustness.
+    * Regularization (Dropout, potentially L2) to reduce overfitting.
+    * Hyperparameter tuning exploration (details likely in `experiment/`).
+* Includes both an optimized final model and a simpler baseline model for comparison.
+* Reports final test accuracy and loss metrics within the notebook output.
 
-### Final Phase:
-The final optimized CNN was implemented with:
+## Requirements
 
-- 3 Convolutional Layers with ReLU activation and 3×3 filter sizes.
-- Dropout Regularization at 0.25
-- Data Augmentation such as rotations and horizontal flips.
+* Python (likely 3.7+)
+* TensorFlow (`tensorflow`)
+* NumPy (`numpy`)
+* (Potentially) Matplotlib (`matplotlib`) for visualizing results or data.
+* A Jupyter Notebook environment (e.g., Jupyter Lab, Jupyter Notebook, Google Colab, VS Code with Jupyter extension).
 
-*- Final Test Accuracy: 89.76%*
+You can typically install the required Python packages using pip:
 
-*- Final Test Loss: 0.2874*
+```bash
+pip install tensorflow numpy matplotlib jupyterlab notebook
+```
 
-### Baseline Model for Comparison:
-A simple CNN architecture was implemented as a baseline to evaluate the improvements of the final model. The baseline model included:
+## Model Details
 
-- 1 Convolutional Layer with 32 filters of size 2×2 and ReLU activation.
-- Max Pooling Layer for down-sampling.
-- High Dropout Rate of 60% after pooling and flattening layers, limiting its learning capacity.
-- Dense Softmax Output Layer for classifying 10 categories.
+The project involved experimenting with different CNN architectures. The key models are:
 
-Results:
+### Final Optimized Model
 
-*- Accuracy: 86%*
+This model represents the outcome of optimization efforts, incorporating deeper layers and regularization techniques.
 
-*- Loss: 0.3535*
+* **Architecture:**
+    * 3 Convolutional Layers (using 3x3 filters, ReLU activation).
+    * Likely includes Max Pooling layers after convolutional layers (common practice).
+    * Flatten layer before dense layers.
+    * Dense output layer with Softmax activation (for 10 classes).
+* **Regularization:**
+    * Dropout applied (rate specified as 0.25).
+    * (Potentially L2 regularization, as mentioned in the problem statement).
+* **Data Augmentation:**
+    * Techniques like random rotations and horizontal flips were applied during training.
 
-The final model significantly outperformed the baseline due to its deeper architecture, balanced dropout, and enhanced regularization techniques.
+### Baseline Model
 
-## Contents:
+A simpler CNN used for comparison to demonstrate the effectiveness of the optimizations.
 
-- "src/": contains the source code written in Python using TensorFlow/Keras.
+* **Architecture:**
+    * 1 Convolutional Layer (32 filters, 2x2 size, ReLU activation).
+    * 1 Max Pooling Layer.
+    * Flatten layer.
+    * Dense output layer with Softmax activation (10 classes).
+* **Regularization:**
+    * High Dropout Rate (specified as 60%) applied after pooling and flattening.
 
-- "experiment/": includes screenshots of experimental results I got during the tuning phase.
-  
-- "README.md": you are reading it right now!
+## Usage
+
+1.  Ensure you have Python and the required libraries installed (see Requirements).
+2.  Make sure you have a Jupyter Notebook environment set up.
+3.  Navigate to the project directory in your terminal.
+4.  Start your Jupyter environment (e.g., run `jupyter lab` or `jupyter notebook`).
+5.  Open the `.ipynb` notebook file located in the `src/` directory within the Jupyter interface.
+6.  Run the cells in the notebook sequentially to load data, define models, train, evaluate, and view results.
+
+## Results
+
+Performance comparison between the final optimized model and the baseline (as observed in the notebook output):
+
+* **Final Model:**
+    * Test Accuracy: **89.76%**
+    * Test Loss: **0.2874**
+* **Baseline Model:**
+    * Test Accuracy: 86%
+    * Test Loss: 0.3535
+
+The final model demonstrated improved accuracy and lower loss compared to the baseline, highlighting the benefits of the deeper architecture, data augmentation, and refined regularization.
