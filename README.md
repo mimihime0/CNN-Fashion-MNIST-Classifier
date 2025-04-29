@@ -1,4 +1,4 @@
-# Fashion-MNIST CNN Classifier
+# Fashion-MNIST CNN Classifier 
 
 ## Description
 
